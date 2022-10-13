@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <title>Estilos internos</title>
+    <style>
+        body {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            box-sizing: border-box;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        nav {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 65px;
+            width: 100vw;
+            z-index: 1;
+            padding: 0 40px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 0 10px 0 #e2e2e2;
+        }
+
+        nav span {
+            font-weight: bold;
+            font-size: 1.3rem;
+            color: #2d3da1;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #6475e2;
+            border: 1px solid #6475e2;
+            padding: 10px 15px;
+            font-weight: bold
+        }
+
+        aside {
+            width: 400px;
+            height: calc(100vh - 65px);
+            position: fixed;
+            left: 0;
+            top: 65px;
+            box-sizing: border-box;
+            background-color: #f3f5ff;
+            z-index: 1;
+            padding: 45px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .chat_user {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            gap: 20px;
+            padding: 10px 5px;
+            border-bottom: 1px solid #d1d2d3;
+        }
+
+        .chat_user_selected {
+            background-color: #dee1f4;
+        }
+
+        .chat_user img {
+            object-fit: cover;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .chat_user_info {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            width: calc(100% - 65px);
+        }
+
+        .chat_user_info_top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chat_user_info_top span:first-child {
+            color: #2d3da1;
+            font-size: 1.1rem;
+        }
+
+        .chat_user_info_top span:last-child {
+            font-size: .9rem;
+        }
+
+        .chat_user_info_bottom {
+            font-size: .8rem;
+        }
+
+        main {
+            width: calc(100vw - 400px);
+            padding: 45px;
+            height: calc(100vh - 65px);
+            box-sizing: border-box;
+            left: 400px;
+            top: 65px;
+            position: relative;
+        }
+
+        main header {
+            display: flex;
+            width: 100%;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: #f1f1f1;
+            gap: 15px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        main header img {
+            object-fit: cover;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        main section {
+            width: 100%;
+            background-color: #fafbff;
+            height: calc(100% - 100px);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            position: relative;
+            padding: 30px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+
+        main footer {
+            width: 100%;
+            height: 50px;
+            background-color: #f0f0f0;
+            box-sizing: border-box;
+        }
+
+        main footer input[type="text"] {
+            height: 100%;
+            width: 100%;
+            border: none;
+            background-color: transparent;
+            box-sizing: border-box;
+            padding: 0 15px;
+        }
+
+        .message {
+            color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            max-width: 400px;
+            width: fit-content;
+        }
+
+        .message_foreign {
+            background-color: #6475e2;
+        }
+
+        .message_own {
+            background-color: #6a6c76;
+            margin-left: auto;
+        }
+
+        .message span {
+            display: block;
+            text-align: right;
+            color: #e8e8e8;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <span>
+            Yo what up!
+        </span>
+        <a target="_blank" rel="noreferrer" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Click Me!</a>
+    </nav>
+    <aside>
+        <div class="chat_user">
+            <img width="45px" height="45px" src="./assets/ghost.jpeg" alt="Ghost">
+            <div class="chat_user_info">
+                <div class="chat_user_info_top">
+                    <span>
+                        The Bois
+                    </span>
+                    <span>
+                        10:52 am
+                    </span>
+                </div>
+                <div class="chat_user_info_bottom">
+                    +521234567: Lorem ipsum dolor sit amet
+                </div>
+            </div>
+        </div>
+        <div class="chat_user">
+            <img width="45px" height="45px" src="./assets/homer.png" alt="Homer">
+            <div class="chat_user_info">
+                <div class="chat_user_info_top">
+                    <span>
+                        Homer
+                    </span>
+                    <span>
+                        9:32 am
+                    </span>
+                </div>
+                <div class="chat_user_info_bottom">
+                    I want a doughnut
+                </div>
+            </div>
+        </div>
+        <div class="chat_user chat_user_selected">
+            <img width="45px" height="45px" src="./assets/minion.jpeg" alt="Minion">
+            <div class="chat_user_info">
+                <div class="chat_user_info_top">
+                    <span>
+                        Stuart
+                    </span>
+                    <span>
+                        8:35 am
+                    </span>
+                </div>
+                <div class="chat_user_info_bottom">
+                    BANANAAAA!!!
+                </div>
+            </div>
+        </div>
+    </aside>
+    <main>
+        <header>
+            <img width="35px" height="35px" src="./assets/minion.jpeg" alt="Minion">
+            <div>
+                Stuart
+            </div>
+        </header>
+        <section>
+            <div class="message message_foreign">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias nobis nulla iure optio, delectus
+                exercitationem nam soluta voluptates, sed assumenda, natus quo debitis! Corporis totam error,
+                consequuntur minima exercitationem libero!
+                <span>
+                    7:36 am
+                </span>
+            </div>
+            <div class="message message_own">
+                Lorem ipsum dolor sit, amet consectetur!!
+                <span>
+                    7:59 am
+                </span>
+            </div>
+            <div class="message message_own">
+                Lorem ipsum!!
+                <span>
+                    8:00 am
+                </span>
+            </div>
+            <div class="message message_foreign">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias nobis nulla iure optio, delectus
+                exercitationem nam soluta voluptates!!
+                <span>
+                    8:03 am
+                </span>
+            </div>
+            <div class="message message_foreign">
+                Lorem ipsum dolor sit...
+                <span>
+                    8:07 am
+                </span>
+            </div>
+            <div class="message message_own">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere vel pariatur in dolores aut iure!
+                <span>
+                    8:15 am
+                </span>
+            </div>
+            <div class="message message_own">
+                Lorem ipsum!!
+                <span>
+                    8:24 am
+                </span>
+            </div>
+            <div class="message message_foreign">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, a? Bananaaaa!!!
+                <span>
+                    8:30 am
+                </span>
+            </div>
+            <div class="message message_foreign">
+                Bananaaaa!!! Bananaaaa...
+                <span>
+                    8:33 am
+                </span>
+            </div>
+            <div class="message message_foreign">
+                BANANAAAA!!!
+                <span>
+                    8:53 am
+                </span>
+            </div>
+        </section>
+        <footer>
+            <input type="text" name="Message" placeholder="Type your message...">
+        </footer>
+    </main>
+</body>
+
+</html>
